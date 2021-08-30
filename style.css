@@ -1,0 +1,464 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Rubik:wght@400;500;600&display=swap"); */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+:root {
+  --ff-secondary: "Karla", sans-serif;
+  --ff-primary: "Rubik", sans-serif;
+  --clr-paragraph: #a7a9be;
+  --clr-heading: #fffffe;
+  --clr-btn-text: #fffffe;
+  --clr-bg: #0f0e17;
+  --clr-btn: #ff8906;
+  --clr-stroke: black;
+  --clr-main: #fffffe;
+  --clr-highlight: #ff8906;
+  --clr-secondary: #f25f4c;
+  --clr-tertiary: #e53170;
+  /* other css */
+  --transition: all 0.3s linear;
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  --spacing-1: 0.1rem;
+  --spacing-2: 0.25rem;
+
+  --max-width: 1170px;
+  --break-point: 776px;
+}
+html {
+  font-size: 100%;
+  overflow: overlay;
+} /*16px*/
+
+body {
+  background: var(--clr-bg);
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--clr-paragraph);
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--clr-heading);
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+/* GLOBAL CSS CLASSES */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.container {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.margin-top {
+  margin-top: 5rem;
+}
+.section-divider {
+  height: 0.25rem;
+  background-color: var(--clr-main);
+}
+/* Main CSS start */
+
+/* MODAL CSS START */
+.modal {
+  transition: var(--transition);
+  background-color: var(--clr-bg);
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  position: absolute;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  align-items: center;
+  transform: translate(-100%);
+}
+.modal__close-btn__container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.close-btn {
+  color: var(--clr-highlight);
+  background-color: transparent;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.modal__nav__links__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+.modal__nav__link {
+  font-size: 2rem;
+}
+.modal__nav__link > a {
+  color: var(--clr-highlight);
+  transition: var(--transition);
+}
+.modal__nav__link > a:hover {
+  color: var(--clr-tertiary);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+.modal__social__links {
+  margin-bottom: 2rem;
+}
+.modal__social__links__list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.modal__social__link > a {
+  color: var(--clr-highlight);
+  display: inline-block;
+  margin: 0 1.5rem;
+  transition: var(--transition);
+}
+.modal__social__link > a:hover {
+  color: var(--clr-tertiary);
+}
+.modal__social__link {
+  color: white;
+  font-size: 2rem;
+}
+/* MODAL CSS END */
+
+/* HEADER CSS START */
+
+.header {
+  position: relative;
+  padding-top: 66px;
+}
+/* HEADER CSS START */
+
+/*  NAV CSS START*/
+.shadow {
+  box-shadow: 0 0 12px var(--clr-main);
+}
+.nav__wrapper {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background-color: var(--clr-bg);
+  height: 66px;
+  max-height: 66px;
+  z-index: 1;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
+}
+.logo {
+  font-family: "Monoton", cursive;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: var(--spacing-1);
+  color: var(--clr-heading);
+}
+.header__nav__links {
+  display: none;
+}
+.nav__links__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.nav__link {
+  display: block;
+  flex-grow: 1;
+}
+.nav__link > a {
+  display: inline-block;
+  text-transform: capitalize;
+  color: var(--clr-btn-text);
+  line-height: 1;
+  font-size: 1.25rem;
+  transition: color 0.3s linear;
+}
+.nav__link > a:hover {
+  color: var(--clr-tertiary);
+  text-decoration: underline;
+  text-underline-offset: 0.45rem;
+}
+.open-btn {
+  font-size: 2rem;
+  background-color: transparent;
+  color: var(--clr-btn-text);
+  transition: var(--transition);
+}
+:is(.open-btn, .close-btn):hover {
+  transform: rotate(90deg);
+  color: var(--clr-tertiary);
+}
+
+@media screen and (min-width: 776px) {
+  .header__nav article {
+    flex-grow: 1;
+  }
+  .header__nav__icon-btn {
+    display: none;
+  }
+  .header__nav__links {
+    display: block;
+  }
+}
+/*  NAV CSS END*/
+
+/* HERO INFO CSS START */
+
+.hero__container {
+  height: 100vh;
+  max-height: calc(100vh - 66px);
+  letter-spacing: var(--spacing-1);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.hero__desc {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+.hero__hire-btn {
+  font-size: 1.75rem;
+  border-radius: var(--radius-1);
+  letter-spacing: var(--spacing-1);
+  background-color: transparent;
+  border: 0.1rem solid var(--clr-btn-text);
+  color: var(--clr-btn-text);
+}
+.hero__hire-btn:hover {
+  border-color: var(--clr-tertiary);
+  color: var(--clr-tertiary);
+}
+.hero__social__links__list {
+  display: flex;
+  padding: 0;
+}
+.hero__social__link > a {
+  font-size: 2rem;
+  color: var(--clr-btn-text);
+  display: inline-block;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+
+.hero__social__link > a:hover {
+  color: var(--clr-tertiary);
+}
+.hero__container__image {
+  display: none;
+}
+.hero__image__wrapper {
+  width: 350px;
+  height: 350px;
+  perspective: 800px;
+  border: 0.25rem solid var(--clr-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  position: relative;
+}
+.hero__image__wrapper::after {
+  content: "";
+  width: 0.25rem;
+  height: 1.35rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-main);
+}
+.hero__image {
+  border-radius: 1rem;
+  transition: var(--transition);
+  transform: rotateY(-30deg);
+  width: 85%;
+}
+
+/* HERO INFO CSS END */
+@media screen and (min-width: 776px) {
+  .hero__container__image {
+    display: block;
+  }
+  .hero__container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+/* 
+===============
+SKILLS CSS START
+===============
+*/
+.skills {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+.skills__title {
+  grid-area: 1/1/2/3;
+}
+/* 
+===============
+SKILLS CSS END
+===============
+*/
+/* 
+===============
+FOOTER CSS START
+===============
+*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.footer__social__links__list {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__social__link {
+  margin: 0 0.75rem;
+}
+.footer__social__link > a {
+  font-size: 1.75rem;
+  color: var(--clr-btn-text);
+  display: inline-block;
+  transition: var(--transition);
+}
+.footer__social__link > a:hover {
+  color: var(--clr-tertiary);
+}
+.footer__text {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: var(--spacing-1);
+  text-transform: capitalize;
+  text-align: center;
+}
+@media screen and (min-width: 776px) {
+  .footer__social__link {
+    margin: 0 1.5rem;
+  }
+  .footer__social__link > a {
+    font-size: 2rem;
+  }
+  .footer__text {
+    font-size: 1.5rem;
+  }
+}
+/* 
+===============
+FOOTER CSS END
+===============
+*/
+/* 
+===============
+ABOUT CSS START
+===============
+*/
+.about__container {
+  height: calc(100vh - 129.6px - 4px - 4rem - 66px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about__heading {
+  text-align: center;
+  font-size: 3rem;
+}
+.about__desc {
+  text-align: justify;
+  max-width: 576px;
+  width: 90vw;
+  text-align-last: center;
+}
+.name {
+  color: var(--clr-heading);
+  font-size: 1.25rem;
+}
+/* 
+===============
+ABOUT CSS END
+===============
+*/

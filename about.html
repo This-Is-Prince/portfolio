@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Rubik:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .modal {
+        transform: translate(-100%);
+      }
+    </style>
+    <script>
+      function onLoad() {
+        document.body.style.visibility = "visible";
+      }
+    </script>
+  </head>
+  <body style="visibility: hidden" onload="onLoad()">
+    <section class="modal">
+      <article class="modal__close-btn__container">
+        <button class="btn close-btn">
+          <i class="fa fa-times"></i>
+        </button>
+      </article>
+      <article class="modal__nav__links">
+        <ul class="modal__nav__links__list">
+          <li class="modal__nav__link">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="modal__nav__link">
+            <a href="./about.html">about</a>
+          </li>
+          <li class="modal__nav__link">
+            <a href="#">projects</a>
+          </li>
+          <li class="modal__nav__link">
+            <a href="#">contact</a>
+          </li>
+        </ul>
+      </article>
+      <article class="modal__social__links">
+        <ul class="modal__social__links__list">
+          <li class="modal__social__link">
+            <a href="https://twitter.com/_ThisIsPrince_">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="modal__social__link">
+            <a href="mailto:this.is.kumar.prince@gmail.com">
+              <i class="fas fa-envelope-square"></i>
+            </a>
+          </li>
+          <li class="modal__social__link">
+            <a href="https://github.com/This-Is-Prince">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="modal__social__link">
+            <a href="https://www.linkedin.com/in/prince-kumar-79425621b/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <header class="header">
+      <div class="nav__wrapper">
+        <nav class="header__nav container">
+          <article class="header__nav__logo">
+            <p class="logo">Prince</p>
+          </article>
+          <article class="header__nav__links">
+            <ul class="nav__links__list">
+              <li class="nav__link">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="nav__link">
+                <a href="./about.html">about</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">projects</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">contact</a>
+              </li>
+            </ul>
+          </article>
+          <article class="header__nav__icon-btn">
+            <button class="btn open-btn"><i class="fa fa-bars"></i></button>
+          </article>
+        </nav>
+      </div>
+    </header>
+    <main class="about__container container">
+      <h1 class="about__heading">About me</h1>
+      <p class="about__desc">
+        Hi, I am <span class="name">Prince</span> and I am a web developer. I
+        live and work in somewhere warm. I spend most of my day, experimenting
+        with HTML, CSS and JavaScript (and its endless list of frameworks). I
+        enjoy coding and the challenge of learning something new everyday.
+      </p>
+    </main>
+    <div class="section-divider"></div>
+
+    <footer class="footer">
+      <ul class="footer__social__links__list">
+        <li class="footer__social__link">
+          <a href="https://twitter.com/_ThisIsPrince_">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="footer__social__link">
+          <a href="mailto:this.is.kumar.prince@gmail.com">
+            <i class="fas fa-envelope-square"></i>
+          </a>
+        </li>
+        <li class="footer__social__link">
+          <a href="https://github.com/This-Is-Prince">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="footer__social__link">
+          <a href="https://www.linkedin.com/in/prince-kumar-79425621b/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__text">
+        &#169;
+        <span class="date">2000</span>
+        Prince. all right &#174; reserved
+      </p>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
